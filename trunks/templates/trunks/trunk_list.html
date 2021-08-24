@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Analisis de Impacto</title>
+        
+
+    </head>
+    <body>
+        <header>
+            <h1><a href="/">Analisis de Impacto</a></h1>
+        </header>
+            {% for Trunk_OTN in otn %}
+                <article>
+                    <time>Published: {{ Trunk_OTN.Published_date }}</time>
+                    <h2><a href="">{{ Trunk_OTN.Trunk }}</a></h2>
+                    <p>{{ Trunk_OTN.Detail|linebreaksbr }}</p>
+                </article>
+            {% endfor %}
+            {% for Trunk_DWDM in dwdm %}
+                <article>
+                    <time>Published: {{ Trunk_DWDM.Published_date }}</time>
+                    <h2><a href="">{{ Trunk_DWDM.Trunk }}</a></h2>
+                    <p>{{ Trunk_DWDM.Detail|linebreaksbr }}</p>
+                </article>
+            {% endfor %}
+            {% for Trunk_SDH in sdh %}
+                <article>
+                    <time>Published: {{ Trunk_SDH.Published_date }}</time>
+                    <h2><a href="">{{ Trunk_SDH.Trunk }}</a></h2>
+                    <p>{{ Trunk_SDH.Detail|linebreaksbr }}</p>
+                </article>
+            {% endfor %}
+    </body>
+</html>
