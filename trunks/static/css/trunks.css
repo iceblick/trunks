@@ -1,0 +1,103 @@
+.page-header {
+    background-color: orangered;
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1,
+.page-header h1 a,
+.page-header h1 a:visited,
+.page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea,
+.post-form input {
+    width: 100%;
+}
+
+.top-menu,
+.top-menu:hover,
+.top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.otn {
+    margin-bottom: 70px;
+}
+
+.otn h2 a,
+.otn h2 a:visited {
+    color: darkblue;
+}
+
+.otn > .date,
+.otn > .actions {
+    float: right;
+}
+
+.dwdm {
+    margin-bottom: 70px;
+}
+
+.dwdm h2 a,
+.dwdm h2 a:visited {
+    color: darkred;
+}
+
+.dwdm > .date,
+.dwdm > .actions {
+    float: right;
+}
+
+.sdh {
+    margin-bottom: 70px;
+}
+
+.sdh h2 a,
+.sdh h2 a:visited {
+    color: darkseagreen;
+}
+
+.sdh p,
+.sdh p:visited {
+    color: darkolivegreen;
+}
+
+.sdh > .date,
+.sdh > .actions {
+    float: right;
+}
+
+.btn-default,
+.btn-default:visited {
+    color: darkgray;
+    background: none;
+    border-color: #C25100;
+}
+
+.btn-default:hover {
+    color: pink;
+    background-color: #C25100;
+}

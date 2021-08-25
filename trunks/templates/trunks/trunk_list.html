@@ -1,35 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        {% load static %}
         <meta charset="UTF-8">
         <title>Analisis de Impacto</title>
-        
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/trunks.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
     </head>
     <body>
-        <header>
-            <h1><a href="/">Analisis de Impacto</a></h1>
+        <header class="page-header">
+            <div class="container">
+                <h1><a href="/">Analisis de Impacto</a></h1>
+            </div>
         </header>
-            {% for Trunk_OTN in otn %}
-                <article>
-                    <time>Published: {{ Trunk_OTN.Published_date }}</time>
-                    <h2><a href="">{{ Trunk_OTN.Trunk }}</a></h2>
-                    <p>{{ Trunk_OTN.Detail|linebreaksbr }}</p>
-                </article>
-            {% endfor %}
-            {% for Trunk_DWDM in dwdm %}
-                <article>
-                    <time>Published: {{ Trunk_DWDM.Published_date }}</time>
-                    <h2><a href="">{{ Trunk_DWDM.Trunk }}</a></h2>
-                    <p>{{ Trunk_DWDM.Detail|linebreaksbr }}</p>
-                </article>
-            {% endfor %}
-            {% for Trunk_SDH in sdh %}
-                <article>
-                    <time>Published: {{ Trunk_SDH.Published_date }}</time>
-                    <h2><a href="">{{ Trunk_SDH.Trunk }}</a></h2>
-                    <p>{{ Trunk_SDH.Detail|linebreaksbr }}</p>
-                </article>
-            {% endfor %}
+        <main class="container">
+            <div class="row">
+                <div class="col">
+                    {% for Trunk_OTN in otn %}
+                        <article class="otn">
+                            <time class="date">
+                                {{ Trunk_OTN.Published_date }}
+                            </time>
+                            <h2><a href="">{{ Trunk_OTN.Trunk }}</a></h2>
+                            <p>{{ Trunk_OTN.Detail|linebreaksbr }}</p>
+                        </article>
+                    {% endfor %}
+                </div>
+            </div>
+        </main>
+        <main class="container">
+            <div class="row">
+                <div class="col">
+                    {% for Trunk_DWDM in dwdm %}
+                        <article class="dwdm">
+                            <time class="date">
+                                {{ Trunk_DWDM.Published_date }}
+                            </time>
+                            <h2><a href="">{{ Trunk_DWDM.Trunk }}</a></h2>
+                            <p>{{ Trunk_DWDM.Detail|linebreaksbr }}</p>
+                        </article>
+                    {% endfor %}
+                </div>
+            </div>
+        </main>
+        <main class="container">
+            <div class="row">
+                <div class="col">
+                    {% for Trunk_SDH in sdh %}
+                        <article class="sdh">
+                            <time class="date">
+                                {{ Trunk_SDH.Published_date }}
+                            </time>
+                            <h2><a href="">{{ Trunk_SDH.Trunk }}</a></h2>
+                            <p>{{ Trunk_SDH.Detail|linebreaksbr }}</p>
+                        </article>
+                    {% endfor %}
+                </div>
+            </div>
+        </main>
     </body>
 </html>
