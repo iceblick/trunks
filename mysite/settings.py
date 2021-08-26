@@ -78,11 +78,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'djangodatabase',
-        'USER': 'djangoadmin',
-        'PASSWORD': 'Kr210315%',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': 'iceblick$djangodatabase',
+        'USER': 'iceblick',
+        'PASSWORD': 'Cable2021%',
+        'HOST': 'iceblick.mysql.pythonanywhere-services.com',
     }
 }
 
