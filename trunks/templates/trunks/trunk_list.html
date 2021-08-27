@@ -7,7 +7,7 @@
                             <time class="date">
                                 {{ Trunk_OTN.Published_date }}
                             </time>
-                            <h2><a href="">{{ Trunk_OTN.Trunk }}</a></h2>
+                            <h2><a href="{% url 'Trunk_OTN_detail' pk=Trunk_OTN.pk %}">{{ Trunk_OTN.Trunk }}</a></h2>
                             <p>{{ Trunk_OTN.Detail|linebreaksbr }}</p>
                         </article>
                     {% endfor %}
@@ -17,7 +17,7 @@
                             <time class="date">
                                 {{ Trunk_DWDM.Published_date }}
                             </time>
-                            <h2><a href="">{{ Trunk_DWDM.Trunk }}</a></h2>
+                            <h2><a href="{% url 'Trunk_DWDM_detail' pk=Trunk_DWDM.pk %}">{{ Trunk_DWDM.Trunk }}</a></h2>
                             <p>{{ Trunk_DWDM.Detail|linebreaksbr }}</p>
                         </article>
                     {% endfor %}
@@ -27,7 +27,7 @@
                             <time class="date">
                                 {{ Trunk_SDH.Published_date }}
                             </time>
-                            <h2><a href="">{{ Trunk_SDH.Trunk }}</a></h2>
+                            <h2><a href="{% url 'Trunk_SDH_detail' pk=Trunk_SDH.pk %}">{{ Trunk_SDH.Trunk }}</a></h2>
                             <p>{{ Trunk_SDH.Detail|linebreaksbr }}</p>
                         </article>
                     {% endfor %}
